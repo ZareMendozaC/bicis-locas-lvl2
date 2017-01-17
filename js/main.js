@@ -109,10 +109,9 @@ function valiNombre(e) {
    			}
    		if(isvalid)
    		{
-   			 document.getElementById("lastname").focus();
-   			 var salida= document.getElementById("salida");
-   			 salida.innerHTML='<p class= "salidaMala animated rubberBand"></p>';
-   			 
+   			
+   			  checkeado.innerHTML='';
+   			  document.getElementById("lastname").focus();
    		}
     }
 
@@ -150,9 +149,8 @@ function valiApellido(e) {
    			}
    	  if(isvalid)
    		{
+   			 checkeado.innerHTML='';
    			 document.getElementById("input-email").focus();
-   			  var salida= document.getElementById("salida");
-   			 salida.innerHTML='<p class= "salidaMala animated rubberBand"></p>';
    		}
     }
 }
@@ -180,9 +178,8 @@ function valiEmail(e) {
    			}
    	  if(isvalid)
    		{
+   			 checkeado.innerHTML='';
    			 document.getElementById("input-password").focus();
-   			  var salida= document.getElementById("salida");
-   			 salida.innerHTML='<p class= "salidaMala animated rubberBand"></p>';
    		}
     }
     
@@ -237,10 +234,8 @@ function valiContrasena(e) {
    			}
    			 if(isvalid)
    		{
-   			
+   			 checkeado.innerHTML='';
    			 document.getElementById("opcion").focus();
-   			  var salida= document.getElementById("salida");
-   			 salida.innerHTML='<p class= "salidaMala animated rubberBand"></p>';
    		}
     }
 }
