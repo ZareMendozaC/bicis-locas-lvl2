@@ -73,10 +73,10 @@ function isEmail( email ) {
     }
     return true;
 }
-function valiNombre(e) {
+function valiNombre() {
     var checkeado= document.getElementById("checkeado");
 
-    if (e.keyCode == 13) {
+    
        camposTexto = document.getElementById("formulario").elements;
        var nombre= camposTexto[0].value;
        var apellido= camposTexto[1].value;
@@ -91,7 +91,6 @@ function valiNombre(e) {
        else {
 		       if(isAlphabetic(nombre)==false)
 		       {
-		       		
 		       		document.getElementById("name").value="";
 		       		checkeado.innerHTML='<span class="input-box">✘ Sólo letras por favor!</span>';
 		       		isvalid= false;
@@ -99,8 +98,7 @@ function valiNombre(e) {
 	       	   else
 	       	   {
 			       if(isMayus(nombre)==false)
-			       {
-			       	   
+			       { 
 			       	    document.getElementById("name").value="";
 			       	    checkeado.innerHTML='<span class="input-box">✘ La primera con mayúscula</span>';
 			       	    isvalid= false;
@@ -109,16 +107,15 @@ function valiNombre(e) {
    			}
    		if(isvalid)
    		{
-   			
    			  checkeado.innerHTML='';
    			  document.getElementById("lastname").focus();
    		}
-    }
+    document.getElementById("lastname").focus();
 
 }
-function valiApellido(e) {
+function valiApellido() {
 	var checkeado= document.getElementById("checkeado1");
-    if (e.keyCode == 13) {
+    
        camposTexto = document.getElementById("formulario").elements;
        var nombre= camposTexto[0].value;
        var apellido= camposTexto[1].value;
@@ -152,11 +149,10 @@ function valiApellido(e) {
    			 checkeado.innerHTML='';
    			 document.getElementById("input-email").focus();
    		}
-    }
+    
 }
-function valiEmail(e) {
+function valiEmail() {
 	var checkeado= document.getElementById("checkeado2");
-	 if (e.keyCode == 13) {
        camposTexto = document.getElementById("formulario").elements;
        var email= camposTexto[2].value;
        var isvalid= true;
@@ -180,14 +176,10 @@ function valiEmail(e) {
    		{
    			 checkeado.innerHTML='';
    			 document.getElementById("input-password").focus();
-   		}
-    }
-    
-    
+   		} 
 }
-function valiContrasena(e) {
+function valiContrasena() {
 	var checkeado= document.getElementById("checkeado3");
-    if (e.keyCode == 13) {
        camposTexto = document.getElementById("formulario").elements;
         var contraseña= camposTexto[3].value;
         var isvalid= true;
@@ -237,7 +229,7 @@ function valiContrasena(e) {
    			 checkeado.innerHTML='';
    			 document.getElementById("opcion").focus();
    		}
-    }
+    
 }
 
 
